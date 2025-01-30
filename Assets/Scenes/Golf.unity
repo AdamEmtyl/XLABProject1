@@ -1363,6 +1363,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4607489187838822, guid: 00e2e59cbc04eab4a982218df54ce70b, type: 3}
   m_PrefabInstance: {fileID: 186098882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &196029364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196029365}
+  m_Layer: 0
+  m_Name: Stik
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196029365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196029364}
+  m_LocalRotation: {x: -0, y: 0.2521751, z: -0, w: 0.9676817}
+  m_LocalPosition: {x: 0.767, y: 1.3180008, z: 0.097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1876124187}
+  m_Father: {fileID: 2916151948392805696}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &212800707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4944,7 +4976,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4970,7 +5002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657075170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 86.77146, y: 25.760391, z: 59.704765}
+  m_LocalPosition: {x: 84.67, y: 23.361, z: 61.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5253,6 +5285,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4508691648621678, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
   m_PrefabInstance: {fileID: 717735067}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &721823676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1069567032315564, guid: bdf8e7438a7816543998181bd3067573, type: 3}
+  m_PrefabInstance: {fileID: 156644616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &721823679
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721823676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 264414c28ea0fbb41b924fd17d9228b3, type: 3}
 --- !u!1001 &737206809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13373,11 +13424,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4931211907768612, guid: e88b7bb02ae149940a5a0cddf34fe370, type: 3}
   m_PrefabInstance: {fileID: 1868782965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1876124186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2728306578926890382, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
+  m_PrefabInstance: {fileID: 2378654964858294853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1876124187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
   m_PrefabInstance: {fileID: 2378654964858294853}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1876124190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876124186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b143671bbdd26f4da0c63c8696b1885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2916151948392805704}
+        m_TargetAssemblyTypeName: Golf.Player, Assembly-CSharp
+        m_MethodName: OnCollisionStick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &1876124191
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876124186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
 --- !u!1001 &1876671915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15223,39 +15320,39 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2916151948392805696}
+    m_TransformParent: {fileID: 196029365}
     m_Modifications:
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.772
+      value: -0.044097938
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.308
+      value: -0.15000153
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.118
+      value: 0.14032552
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.19785872
+      value: 0.26653096
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6639026
+      value: 0.47680098
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.29767692
+      value: 0.2381615
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6568666
+      value: 0.8030574
       objectReference: {fileID: 0}
     - target: {fileID: 2728306578926858670, guid: 58cd754c3dde1f944a2d86bd93a982bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15630,7 +15727,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2916151948392805696}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &2916151947966860364
 SkinnedMeshRenderer:
@@ -16298,8 +16395,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 196029365}
   - {fileID: 2916151947966860355}
-  - {fileID: 1876124187}
   - {fileID: 2916151948369913782}
   - {fileID: 2916151947914847344}
   m_Father: {fileID: 0}
@@ -16314,6 +16411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2916151948392805696}
+  - component: {fileID: 2916151948392805704}
   m_Layer: 0
   m_Name: Golfer
   m_TagString: Untagged
@@ -16321,6 +16419,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2916151948392805704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916151948392805703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b902531238eb2a74d9b059fa24ac6a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2916151948409461397
 GameObject:
   m_ObjectHideFlags: 0
